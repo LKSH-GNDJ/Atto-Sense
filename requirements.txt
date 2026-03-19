@@ -1,4 +1,4 @@
-# BotTrain v3.1 — Pinned Production Dependencies
+# BotTrain v4 — Pinned Production Dependencies
 
 # ── Backend core ───────────────────────────────────────────────────────────────
 fastapi==0.111.1
@@ -26,6 +26,14 @@ cachetools==5.3.3
 
 # ── Observability ─────────────────────────────────────────────────────────────
 python-json-logger==2.0.7
+
+# ── NLU accuracy improvements ─────────────────────────────────────────────────
+langdetect==1.0.9        # [F]  language detection before NLU
+python-dateutil==2.9.0   # [L]  entity date normalisation
+Pillow==10.4.0           # [I]  image preprocessing
+
+# ── Optional (OCR fallback — install separately if needed) ────────────────────
+# pytesseract==0.3.10    # [K]  requires tesseract-ocr system package
 
 # ── Frontend ───────────────────────────────────────────────────────────────────
 streamlit==1.37.0
