@@ -1,0 +1,49 @@
+# AttoSense v4 — Pinned Production Dependencies
+
+# ── Backend core ───────────────────────────────────────────────────────────────
+fastapi==0.111.1
+uvicorn[standard]==0.30.1
+gunicorn==22.0.0
+python-dotenv==1.0.1
+python-multipart==0.0.9
+pydantic==2.7.4
+aiofiles==23.2.1
+
+# ── Database ───────────────────────────────────────────────────────────────────
+sqlalchemy==2.0.31
+aiosqlite==0.20.0
+asyncpg==0.29.0
+alembic==1.13.2
+
+# ── Groq SDK ───────────────────────────────────────────────────────────────────
+groq==0.9.0
+httpx==0.27.0
+
+# ── Reliability ────────────────────────────────────────────────────────────────
+tenacity==8.5.0
+slowapi==0.1.9
+cachetools==5.3.3
+
+# ── Observability ─────────────────────────────────────────────────────────────
+python-json-logger==2.0.7
+
+# ── NLU accuracy improvements ─────────────────────────────────────────────────
+langdetect==1.0.9        # [F]  language detection before NLU
+python-dateutil==2.9.0   # [L]  entity date normalisation
+Pillow==10.4.0           # [I]  image preprocessing
+
+# ── Optional (OCR fallback — install separately if needed) ────────────────────
+# pytesseract==0.3.10    # [K]  requires tesseract-ocr system package
+
+# ── Frontend ───────────────────────────────────────────────────────────────────
+streamlit==1.37.0
+plotly==5.22.0
+pandas==2.2.2
+audio-recorder-streamlit==0.0.8
+
+# ── PDF export ─────────────────────────────────────────────────────────────────
+reportlab==4.2.2
+
+# ── Dev / Test ─────────────────────────────────────────────────────────────────
+pytest==8.3.1
+pytest-asyncio==0.23.8
