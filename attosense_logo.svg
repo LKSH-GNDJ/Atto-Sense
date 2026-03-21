@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" fill="none">
+  <defs>
+    <clipPath id="dc1"><polygon points="60,16 104,60 60,104 16,60"/></clipPath>
+  </defs>
+
+  <!-- Outer diamond -->
+  <polygon points="60,12 108,60 60,108 12,60"
+    stroke="#1B1710" stroke-width="2.5" fill="none" stroke-linejoin="miter"/>
+  <!-- Inner diamond (depth) -->
+  <polygon points="60,26 94,60 60,94 26,60"
+    stroke="#1B1710" stroke-width="0.8" stroke-opacity="0.15" fill="none" stroke-linejoin="miter"/>
+
+  <!-- Noisy input signal — left -->
+  <path d="M 0,60 C 8,60 10,60 14,60 L 22,60 C 24,60 25,57 27,54 C 29,51 30,69 32,66 C 34,63 35,57 37,54 C 39,51 40,60 42,60 L 45,60"
+    stroke="#9B3D12" stroke-width="1.5" stroke-opacity="0.45" fill="none" stroke-linecap="round"/>
+
+  <!-- Clean classified pulse inside diamond -->
+  <g clip-path="url(#dc1)">
+    <path d="M 12,60 L 46,60 C 48,60 49,60 50,60 C 52,60 53,42 60,38 C 67,42 68,60 70,60 C 71,60 72,60 74,60 L 108,60"
+      stroke="#9B3D12" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <polygon points="60,12 108,60 60,108 12,60" fill="#9B3D12" fill-opacity="0.04"/>
+  </g>
+
+  <!-- Clean resolved output — right -->
+  <path d="M 75,60 L 108,60"
+    stroke="#9B3D12" stroke-width="1.5" stroke-opacity="0.45" fill="none" stroke-linecap="round"/>
+
+  <!-- Centre dot — classified intent point -->
+  <circle cx="60" cy="60" r="2.8" fill="#9B3D12"/>
+
+  <!-- Corner precision markers -->
+  <circle cx="60"  cy="12"  r="2" fill="#1B1710" fill-opacity="0.6"/>
+  <circle cx="108" cy="60"  r="2" fill="#1B1710" fill-opacity="0.6"/>
+  <circle cx="60"  cy="108" r="2" fill="#1B1710" fill-opacity="0.6"/>
+  <circle cx="12"  cy="60"  r="2" fill="#1B1710" fill-opacity="0.6"/>
+
+  <!-- Wordmark -->
+  <text x="126" y="72"
+    font-family="'Libre Baskerville','Liberation Serif',Georgia,serif"
+    font-size="38" font-weight="700" fill="#1B1710" letter-spacing="-0.5">Atto</text>
+  <text x="230" y="72"
+    font-family="'Libre Baskerville','Liberation Serif',Georgia,serif"
+    font-size="38" font-weight="700" fill="#9B3D12" letter-spacing="-0.5">Sense</text>
+
+  <!-- Tagline -->
+  <text x="127" y="91"
+    font-family="'Libre Baskerville','Liberation Serif',Georgia,serif"
+    font-size="11" font-weight="400" font-style="italic" fill="#6C6656" letter-spacing="0.3">
+    Intent Intelligence
+  </text>
+</svg>
