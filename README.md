@@ -169,30 +169,30 @@ Any input — text, audio, image
            │
            ▼
 ┌──────────────────────────────────────────────┐
-│  Stage 1 — Domain Detection   (~150ms)        │
-│                                               │
-│  information  action  problem  transaction    │
-│  creative     personal         technical      │
+│  Stage 1 — Domain Detection   (~150ms)       │
+│                                              │
+│  information  action  problem  transaction   │
+│  creative     personal         technical     │
 └──────────────────────┬───────────────────────┘
                        │
                        ▼
 ┌──────────────────────────────────────────────┐
-│  Stage 2 — Open-Ended Intent Generation       │
-│                                               │
-│  Generates: "Report duplicate invoice charge" │
-│  Returns full schema:                         │
-│    confidence_scores  reasoning_steps         │
-│    sentiment_score    escalation_reason       │
-│    entities           competing_intent        │
-│                                               │
-│  Dynamic few-shot from your reviewed data     │
+│  Stage 2 — Open-Ended Intent Generation      │
+│                                              │
+│  Generates: "Report duplicate invoice charge"│
+│  Returns full schema:                        │
+│    confidence_scores  reasoning_steps        │
+│    sentiment_score    escalation_reason      │
+│    entities           competing_intent       │
+│                                              │
+│  Dynamic few-shot from your reviewed data    │
 └──────────────────────┬───────────────────────┘
                        │ (only if 0.60 ≤ conf ≤ 0.82)
                        ▼
 ┌──────────────────────────────────────────────┐
 │  Stage 3 — Ensemble Confidence               │
-│  Two parallel passes via asyncio.gather       │
-│  Agreement rate → calibrated confidence       │
+│  Two parallel passes via asyncio.gather      │
+│  Agreement rate → calibrated confidence      │
 └──────────────────────┬───────────────────────┘
                        │
             ┌──────────┴──────────┐
