@@ -165,9 +165,9 @@ start_bot.bat --file messages.txt
 ## NLU Pipeline
 
 ```
-Any input — text, audio, image
-           │
-           ▼
+        Any input — text, audio, image
+                     │
+                     ▼
 ┌──────────────────────────────────────────────┐
 │  Stage 1 — Domain Detection   (~150ms)       │
 │                                              │
